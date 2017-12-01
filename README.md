@@ -1,4 +1,4 @@
-# Moskito - mock this oscript!
+# Moskito - mock this script!
 
 Библиотека предназначена для создания моков (mock) и стабов (stub) в OneScript. За основу взят фреймворк [mockito](http://site.mockito.org/) для Java.
 
