@@ -8,9 +8,11 @@ before_install:
       sh -e /etc/init.d/xvfb start;
       sleep 3;
     fi
-  - wget -O os.deb https://files.gitter.im/EvilBeaver/OneScript/VreX/onescript-engine_1.0.17_all.deb
   - sudo apt-get install mono-complete mono-devel
-  - sudo dpkg -i os.deb; sudo apt install -f
+  - wget -O os.rpm http://oscript.io/downloads/night-build/onescript-engine-1.0.19-1.fc25.noarch.rpm
+  - sudo apt-get install alien
+  - sudo alien os.rpm
+  - sudo dpkg -i *.deb; sudo apt install -f
   - sudo oscript /usr/share/oscript/lib/opm/src/opm.os install opm
   - oscript
 
