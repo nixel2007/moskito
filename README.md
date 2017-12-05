@@ -1,5 +1,7 @@
 # Moskito - mock this script!
 
+[![Build Status](https://travis-ci.org/nixel2007/moskito.svg?branch=develop)](https://travis-ci.org/nixel2007/moskito)
+
 Библиотека предназначена для создания моков (mock) и стабов (stub) в OneScript. За основу взят фреймворк [mockito](http://site.mockito.org/) для Java.
 
 ## Цели создания библиотеки
