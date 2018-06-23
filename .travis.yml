@@ -20,4 +20,4 @@ cache:
     - '$HOME/.sonar/cache'
 
 script:
-  - oscript test.os 
+  - opm test
