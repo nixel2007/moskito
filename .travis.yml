@@ -16,6 +16,7 @@ before_install:
 install: 
   - sudo opm install
   - sudo opm install -f ./1testrunner.ospx
+  - sudo opm install reflector
 
 cache:
   directories:
