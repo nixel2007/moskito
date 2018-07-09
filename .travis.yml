@@ -10,10 +10,13 @@ before_install:
   - wget -O os.deb http://oscript.io/downloads/night-build/deb
   - sudo dpkg -i os.deb; sudo apt install -f
   - oscript
+  - curl -L https://github.com/asosnoviy/1testrunner/releases/download/1.7.1-alpha/1testrunner-1.7.1_alpha.ospx > 1testrunner.ospx
+
 
 install: 
   - sudo opm install
-  - sudo opm install 1testrunner
+  - sudo opm install -f ./1testrunner.ospx
+  - sudo opm install reflector
 
 cache:
   directories:
