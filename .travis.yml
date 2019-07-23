@@ -2,8 +2,6 @@ language: none
 
 sudo: required
 
-lang: none
-
 dist: trusty
 
 git:
