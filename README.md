@@ -1,6 +1,8 @@
 # Moskito - mock this script!
 
 [![CI](https://github.com/nixel2007/moskito/actions/workflows/main.yml/badge.svg)](https://github.com/nixel2007/moskito/actions/workflows/main.yml)
+[![Статус порога качества](https://sonar.openbsl.ru/api/project_badges/measure?project=moskito&metric=alert_status)](https://sonar.openbsl.ru/dashboard?id=moskito)
+[![Технический долг](https://sonar.openbsl.ru/api/project_badges/measure?project=moskito&metric=sqale_index)](https://sonar.openbsl.ru/dashboard?id=moskito)
 
 Библиотека предназначена для создания моков (mock) и стабов (stub) в OneScript. За основу взят фреймворк [mockito](http://site.mockito.org/) для Java.
 
