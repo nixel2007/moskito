@@ -17,7 +17,12 @@ jobs:
     - name: Setup Onescript Action
       uses: otymko/setup-onescript@v1.1
       with:
-        version: 1.5.0
+        version: 1.9.2
+
+    # TODO: удалить после публикации decorator 3.0.0 в hub
+    - name: Install decorator from branch
+      run: |
+        git clone --depth 1 --branch claude/moskito-decorator-migration-5tknk4 https://github.com/nixel2007/decorator oscript_modules/decorator
 
     - name: Install dependencies
       run: |
