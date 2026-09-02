@@ -8,27 +8,11 @@ on:
     - cron:  '0 0 * * 1'
 
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
+  test:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        oscript_version: ['1.9.4', 'dev', 'stable']
-
-    steps:
-    - uses: actions/checkout@v2
-
-    - name: Setup Onescript Action
-      uses: otymko/setup-onescript@v1.1
-      with:
-        version: ${{ matrix.oscript_version }}
-
-    - name: Install dependencies
-      run: |
-        opm install opm@1.0.2
-        opm install -l --dev
-
-    - name: Run tests
-      run: |
-        oscript ./tasks/test.os
+        oscript_version: ['dev', 'lts', 'default']
+    uses: autumn-library/workflows/.github/workflows/test.yml@main
+    with:
+      oscript_version: ${{ matrix.oscript_version }}
