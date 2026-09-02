@@ -22,7 +22,7 @@ jobs:
     # TODO: удалить после публикации decorator 3.0.0 в hub
     - name: Install decorator from branch
       run: |
-        git clone --depth 1 --branch claude/moskito-decorator-migration-5tknk4 https://github.com/nixel2007/decorator oscript_modules/decorator
+        git clone --depth 1 https://github.com/nixel2007/decorator oscript_modules/decorator
 
     - name: Install dependencies
       run: |
