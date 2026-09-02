@@ -1,3 +1,5 @@
 
 \.sonarlint
 *.ospx
+oscript_modules/
+out/

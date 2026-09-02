@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0 * * 1'
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        oscript_version: ['1.2.0', 'dev', 'stable']
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Onescript Action
+      uses: otymko/setup-onescript@v1.1
+      with:
+        version: ${{ matrix.oscript_version }}
+
+    - name: Install dependencies
+      run: |
+        opm install opm@1.0.2
+        opm install -l --dev
+
+    - name: Run tests
+      run: |
+        oscript ./tasks/test.os
